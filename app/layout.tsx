@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import { Space_Grotesk as FontSans } from "next/font/google";
 
+import Header from "@/components/layout/Header";
 import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
 
@@ -23,7 +24,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
           fontSans.variable
         )}
       >
-        {children}
+        <Header />
+        <main className=" pt-[89px]">{children}</main>
       </body>
     </html>
   );
