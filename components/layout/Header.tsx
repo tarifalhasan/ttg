@@ -3,12 +3,16 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import LocaleSwitcher from "../LanguageSwitcher";
 import { Button } from "../ui/button";
 
 const Header = () => {
   const [header, setHeader] = useState(false);
   const [nav, setNav] = useState(false);
+  const pathName = usePathname();
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 40) {
@@ -67,7 +71,7 @@ const Header = () => {
             </li>
             <li>
               <Link
-                href={"/services"}
+                href={"/contacts"}
                 className=" hover:text-primary transition-all duration-500 text-sm lg:text-lg font-medium "
               >
                 contact
@@ -76,6 +80,7 @@ const Header = () => {
           </ul>
         </div>
         <div className="  inline-flex items-center gap-6">
+          <LocaleSwitcher path={`/${pathName.split("/").slice(2).join("/")}`} />
           <Button size={"lg"} className=" px-6 rounded-full">
             sună acum
           </Button>
