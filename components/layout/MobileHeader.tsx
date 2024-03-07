@@ -1,12 +1,14 @@
 "use client";
+import { AlignJustify } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import { Phone, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
 
-const Header = () => {
+const MobileHeader = () => {
   const [header, setHeader] = useState(false);
   const [nav, setNav] = useState(false);
   useEffect(() => {
@@ -27,21 +29,47 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "flex py-5  h-[88px]  items-center fixed left-0 right-0 top-0",
-        header ? "bg-background" : " bg-transparent"
+        "flex lg:hidden py-2 border-b bg-background   items-center fixed left-0 right-0 top-0"
       )}
     >
-      <div
-        className={cn(
-          "flex py-5  h-[88px] items-center container justify-between"
-        )}
-      >
-        <div className="flex items-center lg:gap-x-20">
-          <Link href={"/"}>
-            <Image src={"/images/logo.svg"} alt="ttg" width={166} height={32} />
-          </Link>
-          <ul className="  inline-flex items-center gap-8">
-            <li>
+      <div className=" w-full">
+        <div
+          className={cn("flex py-5  items-center container justify-between")}
+        >
+          <div className="flex items-center gap-x-6">
+            <div>
+              {nav ? (
+                <X
+                  onClick={() => setNav((prev) => !prev)}
+                  className=" w-6  h-6 block"
+                />
+              ) : (
+                <AlignJustify
+                  onClick={() => setNav((prev) => !prev)}
+                  className=" w-6  h-6 block"
+                />
+              )}
+            </div>
+            <div>
+              <Link href={"/"}>
+                <Image
+                  src={"/images/logo.svg"}
+                  alt="ttg"
+                  width={166}
+                  height={32}
+                />
+              </Link>
+            </div>
+          </div>
+          <div className="  inline-flex items-center gap-6">
+            <Button size={"lg"} className="rounded-full">
+              <Phone className=" w-6 h-6" />
+            </Button>
+          </div>
+        </div>
+        {nav && (
+          <ul className="  flex flex-col items-center gap-1">
+            <li onClick={() => setNav(false)}>
               <Link
                 href={"/services"}
                 className=" hover:text-primary transition-all duration-500 text-sm lg:text-lg font-medium "
@@ -49,7 +77,7 @@ const Header = () => {
                 servicii
               </Link>
             </li>
-            <li>
+            <li onClick={() => setNav(false)}>
               <Link
                 href={"/services"}
                 className=" hover:text-primary transition-all duration-500 text-sm lg:text-lg font-medium "
@@ -57,7 +85,7 @@ const Header = () => {
                 pachete
               </Link>
             </li>
-            <li>
+            <li onClick={() => setNav(false)}>
               <Link
                 href={"/services"}
                 className=" hover:text-primary transition-all duration-500 text-sm lg:text-lg font-medium "
@@ -65,7 +93,7 @@ const Header = () => {
                 despre
               </Link>
             </li>
-            <li>
+            <li onClick={() => setNav(false)}>
               <Link
                 href={"/services"}
                 className=" hover:text-primary transition-all duration-500 text-sm lg:text-lg font-medium "
@@ -74,15 +102,10 @@ const Header = () => {
               </Link>
             </li>
           </ul>
-        </div>
-        <div className="  inline-flex items-center gap-6">
-          <Button size={"lg"} className=" px-6 rounded-full">
-            sună acum
-          </Button>
-        </div>
+        )}
       </div>
     </header>
   );
 };
 
-export default Header;
+export default MobileHeader;

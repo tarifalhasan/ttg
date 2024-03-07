@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import { Space_Grotesk as FontSans } from "next/font/google";
 
 import Header from "@/components/layout/Header";
+import MobileHeader from "@/components/layout/MobileHeader";
 import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
 
@@ -25,7 +26,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
         )}
       >
         <Header />
-        <main className=" pt-[89px]">{children}</main>
+        <MobileHeader />
+        <main className=" pt-[120px] lg:pt-[100px]">{children}</main>
       </body>
     </html>
   );
