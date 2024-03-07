@@ -29,7 +29,7 @@ const MobileHeader = () => {
   return (
     <header
       className={cn(
-        "flex lg:hidden py-2 border-b bg-background   items-center fixed left-0 right-0 top-0"
+        "flex lg:hidden z-50 py-2 border-b bg-background   items-center fixed left-0 right-0 top-0"
       )}
     >
       <div className=" w-full">

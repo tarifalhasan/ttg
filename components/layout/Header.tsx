@@ -27,8 +27,8 @@ const Header = () => {
   return (
     <header
       className={cn(
-        " hidden lg:flex py-5  border-b h-[88px]  items-center fixed left-0 right-0 top-0",
-        header ? "bg-background" : " bg-transparent"
+        "  flex py-5 z-50   h-[88px]  items-center fixed left-0 right-0 top-0",
+        header ? " backdrop-blur-sm bg-white/[0.8]" : " bg-transparent"
       )}
     >
       <div

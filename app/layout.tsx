@@ -27,7 +27,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       >
         <Header />
         <MobileHeader />
-        <main className=" pt-[120px] lg:pt-[100px]">{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );

@@ -5,7 +5,7 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 254, 52%, 6%, 1;
+    --foreground: 254, 52%, 6%;
 
     --card: 0 0% 100%;
     --card-foreground: 254, 52%, 6%, 1;
@@ -39,7 +39,7 @@
   }
 
   .dark {
-    --background: 254, 52%, 6%, 1;
+    --background: 254, 52%, 6%;
     --foreground: 210 20% 98%;
 
     --card: 254, 52%, 6%, 1;
@@ -75,5 +75,11 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-3 lg:px-4;
   }
 }
