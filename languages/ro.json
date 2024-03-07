@@ -1,5 +1,27 @@
 {
   "Index": {
     "title": "Salamuakum vai"
-  }
+  },
+  "Header": [
+    {
+      "label": "servicii",
+      "href:": "/servicies",
+      "id": 1
+    },
+    {
+      "label": "pachete",
+      "href:": "/packages",
+      "id": 2
+    },
+    {
+      "label": "despre",
+      "href:": "/about",
+      "id": 1
+    },
+    {
+      "label": "contact",
+      "href:": "/contacts",
+      "id": 1
+    }
+  ]
 }

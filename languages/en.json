@@ -1,12 +1,5 @@
 {
   "Index": {
     "title": "Hello world!"
-  },
-  "Header": [
-    {
-      "label": "",
-      "href:": "/",
-      "id": 1
-    }
-  ]
+  }
 }

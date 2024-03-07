@@ -1,0 +1,26 @@
+[
+  {
+    "en": "servicies",
+    "ro": "servicii",
+    "href": "/servicies",
+    "id": 1
+  },
+  {
+    "en": "packages",
+    "ro": "pachete",
+    "href": "/packages",
+    "id": 2
+  },
+  {
+    "en": "about",
+    "ro": "despre",
+    "href:": "/about",
+    "id": 3
+  },
+  {
+    "en": "contact",
+    "ro": "contact",
+    "href": "/contacts",
+    "id": 4
+  }
+]

@@ -1,18 +1,51 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { useLocale } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import LocaleSwitcher from "../LanguageSwitcher";
 import { Button } from "../ui/button";
+interface MenuItem {
+  en: string;
+  ro: string;
+  href: string;
+  id: number;
+}
+export const menuItems: MenuItem[] = [
+  {
+    en: "servicies",
+    ro: "servicii",
+    href: "/servicies",
+    id: 1,
+  },
+  {
+    en: "packages",
+    ro: "pachete",
+    href: "/packages",
+    id: 2,
+  },
+  {
+    en: "about",
+    ro: "despre",
+    href: "/about",
+    id: 3,
+  },
+  {
+    en: "contact",
+    ro: "contact",
+    href: "/contacts",
+    id: 4,
+  },
+];
 
 const Header = () => {
   const [header, setHeader] = useState(false);
   const [nav, setNav] = useState(false);
   const pathName = usePathname();
-
+  const local = useLocale();
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 40) {
@@ -45,44 +78,22 @@ const Header = () => {
             <Image src={"/images/logo.svg"} alt="ttg" width={166} height={32} />
           </Link>
           <ul className="  inline-flex items-center gap-8">
-            <li>
-              <Link
-                href={"/services"}
-                className=" hover:text-primary transition-all duration-500 text-sm lg:text-lg font-medium "
-              >
-                servicii
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={"/services"}
-                className=" hover:text-primary transition-all duration-500 text-sm lg:text-lg font-medium "
-              >
-                pachete
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={"/services"}
-                className=" hover:text-primary transition-all duration-500 text-sm lg:text-lg font-medium "
-              >
-                despre
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={"/contacts"}
-                className=" hover:text-primary transition-all duration-500 text-sm lg:text-lg font-medium "
-              >
-                contact
-              </Link>
-            </li>
+            {menuItems.map((data, index) => (
+              <li key={data.id}>
+                <Link
+                  href={data.href as string}
+                  className=" hover:text-primary transition-all duration-500 text-sm lg:text-lg font-medium "
+                >
+                  {local == "en" ? data.en : data.ro}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="  inline-flex items-center gap-6">
           <LocaleSwitcher path={`/${pathName.split("/").slice(2).join("/")}`} />
           <Button size={"lg"} className=" px-6 rounded-full">
-            sună acum
+            {local == "en" ? "call now" : "sună acum"}
           </Button>
         </div>
       </div>
