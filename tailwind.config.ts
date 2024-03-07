@@ -20,7 +20,7 @@ const config = {
     },
     extend: {
       backgroundImage: {
-        hero: "url('/images/hero.png')",
+        hero: "url('/images/hero.webp')",
       },
       colors: {
         border: "hsl(var(--border))",
