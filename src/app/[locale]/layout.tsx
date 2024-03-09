@@ -1,13 +1,13 @@
 import "@/styles/globals.css";
 import { Space_Grotesk as FontSans } from "next/font/google";
 
-import Header from "@/components/layout/Header";
 import MobileHeader from "@/components/layout/MobileHeader";
 import { cn } from "@/lib/utils";
 import { Metadata } from "next";
-import { useLocale } from "next-intl";
+import { useLocale, useMessages } from "next-intl";
 import { notFound } from "next/navigation";
 import NextTopLoader from "nextjs-toploader";
+import Header from "../../components/layout/Header";
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -15,11 +15,10 @@ const fontSans = FontSans({
 
 export const metadata: Metadata = {
   title: {
-    default: "เครื่องคิดเงิน POS l SUNMITH พร้อมโปรแกรมขายหน้าร้าน",
-    template: `%s | เครื่องคิดเงิน POS l SUNMITH พร้อมโปรแกรมขายหน้าร้าน`,
+    default: "translate to go",
+    template: `%s | translate to go`,
   },
-  description:
-    "SUNMITH เครื่องคิดเงิน POS หลายรุ่นให้เลือกใช้ตามความเหมาะสมของหน้าร้าน เป็นได้ทั้ง เครื่องคิดเงิน ร้านค้า ระบบ POS ร้านอาหาร",
+  description: "translate to go",
   verification: {
     google:
       "google-site-verification=gfhLH8SIZqE4f0eVC8AX_IrSG2uL4UNK6YroEVIQ5rk",
@@ -34,8 +33,9 @@ export default function RootLayout({
   params: { locale: string };
 }) {
   const l = useLocale();
+  const messages = useMessages();
+  const headerData = messages.header;
 
-  // Show a 404 error if the user requests an unknown locale
   if (locale !== l) {
     notFound();
   }
@@ -60,7 +60,7 @@ export default function RootLayout({
           showAtBottom={false}
           color="hsl(25, 100%, 50%)"
         />
-        <Header />
+        <Header data={headerData as any} />
         <MobileHeader />
         <main>{children}</main>
       </body>

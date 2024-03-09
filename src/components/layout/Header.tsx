@@ -1,5 +1,4 @@
 "use client";
-
 import { cn } from "@/lib/utils";
 import { useLocale } from "next-intl";
 import Image from "next/image";
@@ -8,12 +7,14 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import LocaleSwitcher from "../LanguageSwitcher";
 import { Button } from "../ui/button";
+
 interface MenuItem {
   en: string;
   ro: string;
   href: string;
   id: number;
 }
+
 export const menuItems: MenuItem[] = [
   {
     en: "servicies",
@@ -41,11 +42,12 @@ export const menuItems: MenuItem[] = [
   },
 ];
 
-const Header = () => {
+const Header = ({ data }: { data: any[] }) => {
   const [header, setHeader] = useState(false);
   const [nav, setNav] = useState(false);
   const pathName = usePathname();
   const local = useLocale();
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 40) {
@@ -60,40 +62,41 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  });
+  }, []);
+
   return (
     <header
       className={cn(
-        "  flex py-5 z-50   h-[88px]  items-center fixed left-0 right-0 top-0",
-        header ? " backdrop-blur-sm bg-white/[0.8]" : " bg-transparent"
+        "flex py-5 z-50 h-[88px] items-center fixed left-0 right-0 top-0",
+        header ? "backdrop-blur-sm bg-white/[0.8]" : "bg-transparent"
       )}
     >
       <div
         className={cn(
-          "flex py-5  h-[88px] items-center container justify-between"
+          "flex py-5 h-[88px] items-center container justify-between"
         )}
       >
         <div className="flex items-center lg:gap-x-20">
           <Link href={"/"}>
             <Image src={"/images/logo.svg"} alt="ttg" width={166} height={32} />
           </Link>
-          <ul className="  inline-flex items-center gap-8">
-            {menuItems.map((data, index) => (
-              <li key={data.id}>
+          <ul className="inline-flex items-center gap-8">
+            {data.map((data, index) => (
+              <li key={index}>
                 <Link
                   href={data.href as string}
-                  className=" hover:text-primary transition-all duration-500 text-sm lg:text-lg font-medium "
+                  className="hover:text-primary transition-all duration-500 text-sm lg:text-lg font-medium"
                 >
-                  {local == "en" ? data.en : data.ro}
+                  {data.label}
                 </Link>
               </li>
             ))}
           </ul>
         </div>
-        <div className="  inline-flex items-center gap-6">
+        <div className="inline-flex items-center gap-6">
           <LocaleSwitcher path={`/${pathName.split("/").slice(2).join("/")}`} />
-          <Button size={"lg"} className=" px-6 rounded-full">
-            {local == "en" ? "call now" : "sună acum"}
+          <Button size={"lg"} className="px-6 rounded-full">
+            {local === "en" ? "call now" : "sună acum"}
           </Button>
         </div>
       </div>

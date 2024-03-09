@@ -1,12 +1,12 @@
 "use client";
 import { AlignJustify } from "lucide-react";
 
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Phone, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Button } from "../ui/button";
 
 const MobileHeader = () => {
   const [header, setHeader] = useState(false);

@@ -2,26 +2,41 @@
   "Index": {
     "title": "Salamuakum vai"
   },
-  "Header": [
+  "HomeHero": {
+    "description": "agenția noastră se concentrează pe două aspecte esențiale în orice proiect: calitatea traducerii și rapiditatea cu care ne achităm de responsabilități față de clienții noștri.",
+    "buttonText": "comandă online",
+    "bg_image": "url('/images/hero.webp')"
+  },
+  "stats": [
+    {
+      "number": 1600,
+      "description": "comenzi livrate in 35 de limbi"
+    },
+    {
+      "number": 980,
+      "description": "parteneri si clienti multumiti"
+    }
+  ],
+  "header": [
     {
       "label": "servicii",
-      "href:": "/servicies",
+      "href": "/services",
       "id": 1
     },
     {
       "label": "pachete",
-      "href:": "/packages",
+      "href": "/packages",
       "id": 2
     },
     {
       "label": "despre",
-      "href:": "/about",
-      "id": 1
+      "href": "/about",
+      "id": 3
     },
     {
       "label": "contact",
-      "href:": "/contacts",
-      "id": 1
+      "href": "/contacts",
+      "id": 4
     }
   ]
 }

@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 
 const Hero = () => {
+  const t = useTranslations("HomeHero");
+
   return (
     <div className="bg-[length:100%_94%]  xl:bg-[length:100%_87%]  2xl:bg-[length:100%_99%]  relative z-10 overflow-hidden  lg:bg-hero  lg:min-h-screen 2xl:min-h-[90vh]  w-full bg-no-repeat ">
       <div className=" flex flex-col md:flex-row justify-between gap-5 container w-full">
@@ -10,12 +13,10 @@ const Hero = () => {
               your message, <br /> our words
             </h2>
             <p className=" pt-4 text-base xl:text-lg text-dark-purple font-medium">
-              agenția noastră se concentrează pe două aspecte esențiale în orice
-              proiect: calitatea traducerii și rapiditatea cu care ne achităm de
-              responsabilități față de clienții noștri.
+              {t("description")}
             </p>
             <div className=" pt-7 sm:pt-10">
-              <Button size={"lg"}>comandă online</Button>
+              <Button size={"lg"}>{t("buttonText")}</Button>
             </div>
           </div>
         </div>

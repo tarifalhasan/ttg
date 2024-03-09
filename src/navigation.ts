@@ -12,32 +12,21 @@ export const pathnames = {
   // If all locales use the same pathname, a
   // single external path can be provided.
   "/": "/",
-  "/blogs": "/blogs",
+  "/blog": "/blog",
 
   // If locales use different paths, you can
   // specify each external path per locale.
-  "/about_us": {
-    en: "/about_us",
-    ro: "/about_us",
-  },
-  "/contacts": {
-    en: "/contacts",
-    ro: "/contacts",
-  },
-  "/products": {
-    en: "/products",
-    ro: "/products",
-  },
-  // Dynamic params are supported via square brackets
-  "/products/[productsSlug]-[productsId]": {
-    en: "/products/[productsSlug]-[productsId]",
-    ro: "/products/[productsSlug]-[productsId]",
+  "/about": {
+    en: "/about",
+    ro: "/ueber-uns",
   },
 
-  "/blogs/[slug]-[slug]": {
-    en: "/blogs/[slug]-[slug]",
-    ro: "/blogs/[slug]-[slug]",
+  // Dynamic params are supported via square brackets
+  "/news/[articleSlug]-[articleId]": {
+    en: "/news/[articleSlug]-[articleId]",
+    ro: "/neuigkeiten/[articleSlug]-[articleId]",
   },
+
   // Also (optional) catch-all segments are supported
   "/categories/[...slug]": {
     en: "/categories/[...slug]",
