@@ -7,7 +7,7 @@ export default function Index() {
 
   return (
     <>
-      <Hero />
+      <Hero items={messages.heroItems as any} />
     </>
   );
 }

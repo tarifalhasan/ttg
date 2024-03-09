@@ -7,6 +7,16 @@
     "buttonText": "comandă online",
     "bg_image": "url('/images/hero.webp')"
   },
+  "heroItems": [
+    {
+      "value": "1600",
+      "title": "comenzi livrate in 35 de limbi "
+    },
+    {
+      "value": "980",
+      "title": "parteneri si clienti multumiti"
+    }
+  ],
   "stats": [
     {
       "number": 1600,

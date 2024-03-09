@@ -5,8 +5,18 @@
   "HomeHero": {
     "description": "our agency focuses on two essential aspects in every project: the quality of translation and the speed with which we fulfill our responsibilities towards our clients.",
     "buttonText": "order online",
-    "bg_image": "url('/images/hero.webp')"
+    "bg_image": "url('/images/hero_en.webp')"
   },
+  "heroItems": [
+    {
+      "value": "1600",
+      "title": "orders delivered in 35 languages"
+    },
+    {
+      "value": "980",
+      "title": "satisfied partners and clients"
+    }
+  ],
   "header": [
     {
       "label": "Services",
