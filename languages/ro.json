@@ -144,5 +144,27 @@
         "**răspuns în max 15 minute de la solicitare"
       ]
     }
+  ],
+  "keyBenefits": {
+    "title": "principalele beneficii",
+    "description": "atuurile principale ale ttg sunt beneficiile cele mai importante pe care clienții noștri le-au cerut sau așteptat de-a lungul timpului"
+  },
+  "keyBenefitsItems": [
+    {
+      "title": "flexibilitatea",
+      "description": "flexibilitatea este esența valorilor noastre. ne adaptăm cu succes cerințelor tale, indiferent cât de complexe sau exigente ar fi. abordăm și rezolvăm provocările cu încredere."
+    },
+    {
+      "title": "livrare la timp",
+      "description": "ne mândrim cu angajamentele noastre. îți garantăm o ofertă în mai puțin de două ore - simte-te liber să ne pui la încercare!"
+    },
+    {
+      "title": "tehnologie",
+      "description": "folosirea tehnologiilor de vârf, precum instrumentele de PM, CAT Tools și memoria de traducere îmbunătățește eficiența și reduce costurile, atât pentru noi, cât și pentru clienții noștri."
+    },
+    {
+      "title": "controlul calității",
+      "description": "în cadrul departamentului nostru de Asigurare a Calității (QA), revizorii dedicați urmează ghiduri stricte adaptate fiecărui proiect."
+    }
   ]
 }

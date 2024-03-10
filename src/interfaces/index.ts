@@ -11,3 +11,8 @@ export interface Ipackages {
   features: string[];
   otherFeatures: string[];
 }
+
+export interface IBenefit {
+  title: string;
+  description: string;
+}

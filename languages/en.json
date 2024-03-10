@@ -134,5 +134,27 @@
         "**response within 15 minutes of request"
       ]
     }
+  ],
+  "keyBenefits": {
+    "title": "key benefits",
+    "description": "the main strengths of TTG are the key benefits that our clients have requested or expected over time"
+  },
+  "keyBenefitsItems": [
+    {
+      "title": "flexibility",
+      "description": "flexibility is at the core of our values. we successfully adapt to your requirements, no matter how complex or demanding. we approach and address challenges with confidence."
+    },
+    {
+      "title": "timely delivery",
+      "description": "we take pride in our commitments. we guarantee a quote in less than two hours - feel free to put us to the test!"
+    },
+    {
+      "title": "technology",
+      "description": "the use of cutting-edge technologies, such as Project Management tools, CAT Tools, and Translation Memory, enhances efficiency and reduces costs, both for us and our clients."
+    },
+    {
+      "title": "quality control",
+      "description": "within our Quality Assurance (QA) department, dedicated reviewers follow strict guidelines tailored to each project.."
+    }
   ]
 }
