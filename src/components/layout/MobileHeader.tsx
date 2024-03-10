@@ -55,14 +55,14 @@ const MobileHeader = () => {
               )}
             </div>
             <div>
-              <Link href={"/"}>
+              <a href={"/"}>
                 <Image
                   src={"/images/logo.svg"}
                   alt="ttg"
                   width={166}
                   height={32}
                 />
-              </Link>
+              </a>
             </div>
           </div>
           <div className="  inline-flex items-center gap-6">

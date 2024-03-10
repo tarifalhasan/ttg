@@ -42,11 +42,15 @@ export default function RootLayout({
   }
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html
+      className="scroll-smooth focus:scroll-auto"
+      lang={locale}
+      suppressHydrationWarning
+    >
       <head />
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen  bg-background font-sans antialiased",
           fontSans.variable
         )}
       >

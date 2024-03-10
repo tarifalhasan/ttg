@@ -66,7 +66,7 @@ const ContactUs = () => {
   }
   return (
     <section
-      id="contact"
+      id="contacts"
       className=" bg-light-gray px-2 lg:px-0 py-12 lg:py-16"
     >
       <div className=" relative overflow-hidden rounded-[16px] space-y-12 container max-w-[1024px] bg-purple py-16 px-4 lg:px-20">

@@ -30,22 +30,22 @@
   "header": [
     {
       "label": "servicii",
-      "href": "/services",
+      "href": "#services",
       "id": 1
     },
     {
       "label": "pachete",
-      "href": "/packages",
+      "href": "#packages",
       "id": 2
     },
     {
       "label": "despre",
-      "href": "/about",
+      "href": "#about",
       "id": 3
     },
     {
       "label": "contact",
-      "href": "/contacts",
+      "href": "#contacts",
       "id": 4
     }
   ],
@@ -268,7 +268,7 @@
     "2": "contact person",
     "3": "nume firma",
     "4": "telefon",
-    "email": "adresa email",
-    "res": "CUI"
+    "5": "adresa email",
+    "6": "CUI"
   }
 }

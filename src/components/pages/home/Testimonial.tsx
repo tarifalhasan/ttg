@@ -16,7 +16,7 @@ const Testimonial = ({ data }: { data: ITestimonial[] }) => {
       className=" py-12 lg:py-[72px] text-white bg-foreground"
     >
       <div className="  container max-w-[1024px] space-y-12">
-        <div className=" flex justify-center">
+        <div className=" pb-12 flex justify-center">
           <div className=" inline-block">
             <div>
               <svg
@@ -57,7 +57,7 @@ const Testimonial = ({ data }: { data: ITestimonial[] }) => {
             </div>
           </div>
         </div>
-        <Carousel className=" relative overflow-hidden">
+        <Carousel className="  relative max-w-[78%] mx-auto">
           <CarouselContent className="">
             {data?.map((item, index) => (
               <CarouselItem key={index}>

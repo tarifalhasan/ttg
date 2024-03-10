@@ -130,7 +130,7 @@ export default function OrderForm() {
   const { control, handleSubmit, setValue, watch } = form;
   const translationType = watch("translationType") as string[];
   const EntityType = watch("entityType") as string[];
-  const documents = watch("documents") as any[];
+  const documents = (watch("documents") as any[]) || [];
 
   const handleEntityTypeClick = (selectedType: string) => {
     if (EntityType.includes(selectedType)) {

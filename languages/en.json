@@ -20,22 +20,22 @@
   "header": [
     {
       "label": "Services",
-      "href": "/services",
+      "href": "#services",
       "id": 1
     },
     {
       "label": "Packages",
-      "href": "/packages",
+      "href": "#packages",
       "id": 2
     },
     {
       "label": "About",
-      "href": "/about",
+      "href": "#about",
       "id": 3
     },
     {
       "label": "Contact",
-      "href": "/contacts",
+      "href": "#contacts",
       "id": 4
     }
   ],

@@ -79,9 +79,9 @@ const Header = ({ className }: { className?: string }) => {
         )}
       >
         <div className="flex items-center lg:gap-x-20">
-          <Link href={"/"}>
+          <a href={"/"}>
             <Image src={"/images/logo.svg"} alt="ttg" width={166} height={32} />
-          </Link>
+          </a>
           <ul className="inline-flex items-center gap-8">
             {headerData.map((data, index) => (
               <li key={index}>
