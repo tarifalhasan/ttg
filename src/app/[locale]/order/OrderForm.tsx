@@ -65,6 +65,9 @@ const FormSchema = z.object({
   targetlanguage: z.string({
     required_error: "Please select your target language",
   }),
+  totalPages: z.string({
+    required_error: "please enter page number ",
+  }),
   translationType: z
     .array(z.string())
     .refine((value) => value.some((item) => item), {
@@ -124,6 +127,13 @@ export default function OrderForm() {
       sourcelanguage: "romanian",
       targetlanguage: "english",
       entityType: ["legal_entity"],
+      additionalrequests: "",
+      email: "",
+      companyRegistrationNumber: "",
+      phoneNumber: "",
+      companyName: "",
+      contactPerson: "",
+      totalPages: "",
     },
   });
 
@@ -245,11 +255,26 @@ export default function OrderForm() {
           </div>
           <FormField
             control={control}
+            name="totalPages"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-sm text-dark-purple">
+                  {details("3")}
+                </FormLabel>
+                <FormControl>
+                  <Input placeholder="ex: 100" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={control}
             name="translationType"
             render={() => (
               <FormItem>
                 <FormLabel className="text-sm text-dark-purple">
-                  {details("3")}
+                  {details("type")}
                 </FormLabel>
                 <div className="flex flex-row flex-wrap gap-3 items-start space-x-3 space-y-0">
                   {translationTypes.map((item) => (

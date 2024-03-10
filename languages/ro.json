@@ -254,7 +254,8 @@
     "1": "limba sursa",
     "2": "limba tinta",
     "3": "numar pagini",
-    "4": "selectează tipul traducerii"
+    "4": "selectează tipul traducerii",
+    "type": "selectează tipul traducerii"
   },
   "documents": {
     "title": "incarcare documente",
