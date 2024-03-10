@@ -1,7 +1,6 @@
 import AboutUs from "@/components/pages/home/AboutUs";
 import Collaborators from "@/components/pages/home/Collaborators";
 import ContactUs from "@/components/pages/home/ContactUs";
-import Footer from "@/components/pages/home/Footer";
 import Hero from "@/components/pages/home/Hero";
 import KeyBenefits from "@/components/pages/home/KeyBenefits";
 import OurMission from "@/components/pages/home/OurMission";
@@ -29,7 +28,6 @@ export default function Index() {
         data={messages.testimonialsData as unknown as ITestimonial[]}
       />
       <ContactUs />
-      <Footer />
     </>
   );
 }

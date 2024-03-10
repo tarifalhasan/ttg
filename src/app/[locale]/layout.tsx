@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import { Space_Grotesk as FontSans } from "next/font/google";
 
+import Footer from "@/components/layout/Footer";
 import MobileHeader from "@/components/layout/MobileHeader";
 import { cn } from "@/lib/utils";
 import { Metadata } from "next";
@@ -72,6 +73,7 @@ export default function RootLayout({
             {children}
           </NextIntlClientProvider>
         </main>
+        <Footer />
       </body>
     </html>
   );

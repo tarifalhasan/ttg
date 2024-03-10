@@ -65,7 +65,10 @@ const ContactUs = () => {
     });
   }
   return (
-    <section id="contact" className=" px-2 lg:px-0 py-12 lg:py-16">
+    <section
+      id="contact"
+      className=" bg-light-gray px-2 lg:px-0 py-12 lg:py-16"
+    >
       <div className=" relative overflow-hidden rounded-[16px] space-y-12 container max-w-[1024px] bg-purple py-16 px-4 lg:px-20">
         <div className=" relative z-20  max-w-[549px] mx-auto space-y-2">
           <h2 className=" text-4xl text-center font-bold text-white">
