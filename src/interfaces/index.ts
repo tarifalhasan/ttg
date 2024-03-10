@@ -16,3 +16,12 @@ export interface IBenefit {
   title: string;
   description: string;
 }
+
+export interface ITestimonial {
+  title: string;
+  author: {
+    name: string;
+    role: string;
+  };
+  id?: string;
+}

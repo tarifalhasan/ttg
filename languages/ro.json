@@ -181,5 +181,45 @@
       "name": "irina",
       "description": "managing partner"
     }
-  ]
+  ],
+  "testimonialsData": [
+    {
+      "title": "Ne contactați telefonic, email sau whatsapp. Ne trimiteți documentele. În acest moment vă răspundem la întrebări",
+      "author": {
+        "name": "Andrew Huang ",
+        "role": "Artist"
+      }
+    },
+    {
+      "title": "Ne contactați telefonic, email sau whatsapp. Ne trimiteți documentele. În acest moment vă răspundem la întrebări",
+      "author": {
+        "name": "Andrew Huang ",
+        "role": "Artist"
+      }
+    },
+    {
+      "title": "Ne contactați telefonic, email sau whatsapp. Ne trimiteți documentele. În acest moment vă răspundem la întrebări",
+      "author": {
+        "name": "Andrew Huang ",
+        "role": "Artist"
+      }
+    },
+    {
+      "title": "Ne contactați telefonic, email sau whatsapp. Ne trimiteți documentele. În acest moment vă răspundem la întrebări",
+      "author": {
+        "name": "Andrew Huang ",
+        "role": "Artist"
+      }
+    },
+    {
+      "title": "Ne contactați telefonic, email sau whatsapp. Ne trimiteți documentele. În acest moment vă răspundem la întrebări",
+      "author": {
+        "name": "Andrew Huang ",
+        "role": "Artist"
+      }
+    }
+  ],
+  "testimonialTitle": {
+    "title": "ce spun clienții despre noi"
+  }
 }

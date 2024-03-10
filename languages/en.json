@@ -171,5 +171,45 @@
       "name": "irina",
       "description": "managing partner"
     }
-  ]
+  ],
+  "testimonialsData": [
+    {
+      "title": "We can be reached by phone, email, or WhatsApp. You can send us the documents. Currently, we are available to answer your questions",
+      "author": {
+        "name": "Andrew Huang ",
+        "role": "Artist"
+      }
+    },
+    {
+      "title": "We can be reached by phone, email, or WhatsApp. You can send us the documents. Currently, we are available to answer your questions",
+      "author": {
+        "name": "Andrew Huang ",
+        "role": "Artist"
+      }
+    },
+    {
+      "title": "We can be reached by phone, email, or WhatsApp. You can send us the documents. Currently, we are available to answer your questions",
+      "author": {
+        "name": "Andrew Huang ",
+        "role": "Artist"
+      }
+    },
+    {
+      "title": "We can be reached by phone, email, or WhatsApp. You can send us the documents. Currently, we are available to answer your questions",
+      "author": {
+        "name": "Andrew Huang ",
+        "role": "Artist"
+      }
+    },
+    {
+      "title": "We can be reached by phone, email, or WhatsApp. You can send us the documents. Currently, we are available to answer your questions",
+      "author": {
+        "name": "Andrew Huang ",
+        "role": "Artist"
+      }
+    }
+  ],
+  "testimonialTitle": {
+    "title": "what our clients say about us"
+  }
 }

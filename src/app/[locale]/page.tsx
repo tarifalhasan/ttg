@@ -6,7 +6,8 @@ import OurMission from "@/components/pages/home/OurMission";
 import Packages from "@/components/pages/home/Packages";
 import Services from "@/components/pages/home/Services";
 import Team from "@/components/pages/home/Team";
-import { IBenefit, IService, Ipackages } from "@/interfaces";
+import Testimonial from "@/components/pages/home/Testimonial";
+import { IBenefit, IService, ITestimonial, Ipackages } from "@/interfaces";
 import { useMessages } from "next-intl";
 
 export default function Index() {
@@ -22,6 +23,9 @@ export default function Index() {
       <KeyBenefits data={messages.keyBenefitsItems as unknown as IBenefit[]} />
       <AboutUs />
       <Team />
+      <Testimonial
+        data={messages.testimonialsData as unknown as ITestimonial[]}
+      />
     </>
   );
 }
