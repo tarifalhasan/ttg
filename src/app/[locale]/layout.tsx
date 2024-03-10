@@ -66,7 +66,7 @@ export default function RootLayout({
         />
         <Toaster />
         <Header data={headerData as any} />
-        <MobileHeader />
+        <MobileHeader data={headerData as any} />
 
         <main>
           <NextIntlClientProvider messages={messages}>

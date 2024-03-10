@@ -67,7 +67,7 @@ const Header = ({ data }: { data: any[] }) => {
   return (
     <header
       className={cn(
-        "flex py-5 z-50 h-[88px] items-center  sticky left-0 right-0 top-0",
+        " hidden lg:flex py-5 z-50 h-[88px] items-center  sticky left-0 right-0 top-0",
         header ? "backdrop-blur-sm bg-white/[0.8]" : "bg-transparent"
       )}
     >
@@ -95,9 +95,11 @@ const Header = ({ data }: { data: any[] }) => {
         </div>
         <div className="inline-flex items-center gap-6">
           <LocaleSwitcher path={`/${pathName.split("/").slice(2).join("/")}`} />
-          <Button size={"lg"} className="px-6 rounded-full">
-            {local === "en" ? "call now" : "sună acum"}
-          </Button>
+          <Link href={"/en/order"}>
+            <Button size={"lg"} className="px-6 rounded-full">
+              {local === "en" ? "call now" : "sună acum"}
+            </Button>
+          </Link>
         </div>
       </div>
     </header>

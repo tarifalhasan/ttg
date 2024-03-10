@@ -31,6 +31,7 @@ import { toast } from "@/components/ui/use-toast";
 import { cn } from "@/lib/utils";
 import { CalendarIcon } from "@radix-ui/react-icons";
 import { format } from "date-fns";
+import Image from "next/image";
 const translationTypes = [
   {
     id: "authorized",
@@ -55,6 +56,8 @@ const entityTypesItems = [
     label: "legal entity",
   },
 ] as const;
+const MAX_FILE_SIZE = 16 * 1024 * 1024; // 16MB
+
 const FormSchema = z.object({
   sourcelanguage: z.string({
     required_error: "Please select your source language",
@@ -91,6 +94,12 @@ const FormSchema = z.object({
   companyRegistrationNumber: z.string({
     required_error: "Please enter a company registration number",
   }),
+  documents: z.array(
+    z.object({
+      name: z.string(),
+      size: z.number(),
+    })
+  ),
 });
 
 export default function OrderForm() {
@@ -107,6 +116,8 @@ export default function OrderForm() {
   const { control, handleSubmit, setValue, watch } = form;
   const translationType = watch("translationType") as string[];
   const EntityType = watch("entityType") as string[];
+  const documents = watch("documents") as any[];
+
   const handleEntityTypeClick = (selectedType: string) => {
     if (EntityType.includes(selectedType)) {
       // Remove the type if already selected
@@ -143,6 +154,13 @@ export default function OrderForm() {
     });
     console.log(data);
   }
+
+  const handleDeleteFile = (index: number) => {
+    const updatedFiles = [...documents];
+    updatedFiles.splice(index, 1); // Remove the file at the specified index
+
+    setValue("documents", updatedFiles); // Update the form value
+  };
 
   return (
     <Form {...form}>
@@ -213,7 +231,7 @@ export default function OrderForm() {
                 <FormLabel className="text-sm text-dark-purple">
                   select the type of translation
                 </FormLabel>
-                <div className="flex flex-row items-start space-x-3 space-y-0">
+                <div className="flex flex-row flex-wrap gap-3 items-start space-x-3 space-y-0">
                   {translationTypes.map((item) => (
                     <div key={item.id}>
                       <Button
@@ -257,6 +275,63 @@ export default function OrderForm() {
         <div className=" space-y-4">
           <div>
             <h2 className=" text-lg font-medium">2.document upload</h2>
+          </div>
+          <div>
+            <FormField
+              control={form.control}
+              name="documents"
+              render={({ field }) => (
+                <FormItem className=" space-y-1">
+                  <FormLabel className="text-sm text-dark-purple">
+                    documents (word, docx, PDF, max 16MB)
+                  </FormLabel>
+                  <FormControl>
+                    <Input
+                      type="file"
+                      accept=".doc, .docx, .pdf"
+                      className=" border border-dashed border-purple"
+                      placeholder="click to add documents."
+                      multiple
+                      onChange={(e) => {
+                        const newFiles = Array.from(e.target.files || []);
+                        const updatedFiles = [...documents, ...newFiles];
+
+                        field.onChange(updatedFiles);
+                      }}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <div className=" py-4 flex items-start justify-between">
+              <ul className=" list-inside w-full">
+                {documents?.map((file, index) => (
+                  <li
+                    className="flex items-center justify-between w-full"
+                    key={index}
+                  >
+                    <span className=" text-lg text-purple font-medium">
+                      {file.name} - {file.size} bytes
+                    </span>
+                    <button
+                      onClick={() => handleDeleteFile(index)}
+                      type="button"
+                    >
+                      {documents && (
+                        <Image
+                          src={"/images/trash.svg"}
+                          alt="trash"
+                          width={25}
+                          height={25}
+                        />
+                      )}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
           <FormField
             control={form.control}
@@ -326,7 +401,7 @@ export default function OrderForm() {
                 <FormLabel className="text-sm text-dark-purple">
                   select the type of translation
                 </FormLabel>
-                <div className="flex flex-row items-start space-x-3 space-y-0">
+                <div className="flex flex-wrap gap-3 flex-row items-start space-x-3 space-y-0">
                   {entityTypesItems.map((item) => (
                     <div key={item.id}>
                       <Button
