@@ -221,5 +221,18 @@
     "field4": "email adress ",
     "field5": "message ",
     "btnText": "send message"
-  }
+  },
+  "footer": {
+    "description": "our agency focuses on two essential aspects in every project: translation quality and the speed with which we fulfill our responsibilities towards our clients.",
+
+    "servicesTitle": "services"
+  },
+  "footerServices": [
+    "translation services",
+    "localisation",
+    "authorized translation",
+    "legalization and apostille",
+    "interpretation services",
+    "audio-video subtitles"
+  ]
 }

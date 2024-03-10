@@ -231,5 +231,17 @@
     "field4": "mesaj",
     "field5": "message ",
     "btnText": "trimite mesajul"
-  }
+  },
+  "footer": {
+    "description": "agenția noastră se concentrează pe două aspecte esențiale în orice proiect: calitatea traducerii și rapiditatea cu care ne achităm de responsabilități față de clienții noștri.",
+    "servicesTitle": "servicii"
+  },
+  "footerServices": [
+    "servicii de traducere ",
+    "localizare",
+    "traducere autorizata ",
+    "legalizare si apostilare",
+    "interpretariat",
+    "subtitrari audio-video"
+  ]
 }
