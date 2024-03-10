@@ -1,10 +1,12 @@
+import { Toaster } from "@/components/ui/toaster";
 import "@/styles/globals.css";
+import { NextIntlClientProvider, useMessages } from "next-intl";
 import { Space_Grotesk as FontSans } from "next/font/google";
 
 import MobileHeader from "@/components/layout/MobileHeader";
 import { cn } from "@/lib/utils";
 import { Metadata } from "next";
-import { useLocale, useMessages } from "next-intl";
+import { useLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import NextTopLoader from "nextjs-toploader";
 import Header from "../../components/layout/Header";
@@ -39,6 +41,7 @@ export default function RootLayout({
   if (locale !== l) {
     notFound();
   }
+
   return (
     <html lang={locale} suppressHydrationWarning>
       <head />
@@ -60,9 +63,15 @@ export default function RootLayout({
           showAtBottom={false}
           color="hsl(25, 100%, 50%)"
         />
+        <Toaster />
         <Header data={headerData as any} />
         <MobileHeader />
-        <main>{children}</main>
+
+        <main>
+          <NextIntlClientProvider messages={messages}>
+            {children}
+          </NextIntlClientProvider>
+        </main>
       </body>
     </html>
   );

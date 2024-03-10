@@ -211,5 +211,15 @@
   ],
   "testimonialTitle": {
     "title": "what our clients say about us"
+  },
+  "contact": {
+    "title": "let's collaborate together!",
+    "description": "clients needs vary, which is why we provide personalized solutions, drawing from the experience of tens of thousands of clients.",
+    "field1": "name",
+    "field2": "surname",
+    "field3": "phone number",
+    "field4": "email adress ",
+    "field5": "message ",
+    "btnText": "send message"
   }
 }

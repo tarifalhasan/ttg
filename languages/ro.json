@@ -221,5 +221,15 @@
   ],
   "testimonialTitle": {
     "title": "ce spun clienții despre noi"
+  },
+  "contact": {
+    "title": "hai să colaborăm împreună!",
+    "description": "nevoile clienților sunt diferite, motiv pentru care oferim soluții personalizate, utilizând experiența de la zeci de mii de clienți.",
+    "field1": "nume",
+    "field2": "prenume",
+    "field3": "telefon",
+    "field4": "mesaj",
+    "field5": "message ",
+    "btnText": "trimite mesajul"
   }
 }

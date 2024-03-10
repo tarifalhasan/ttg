@@ -13,9 +13,9 @@ const Testimonial = ({ data }: { data: ITestimonial[] }) => {
   return (
     <section
       id="testimonial"
-      className=" py-12  lg:py-[72px] text-white bg-foreground"
+      className=" py-12 lg:py-[72px] text-white bg-foreground"
     >
-      <div className=" container max-w-[1024px] space-y-12">
+      <div className="  container max-w-[1024px] space-y-12">
         <div className=" flex justify-center">
           <div className=" inline-block">
             <div>
@@ -57,7 +57,7 @@ const Testimonial = ({ data }: { data: ITestimonial[] }) => {
             </div>
           </div>
         </div>
-        <Carousel className="">
+        <Carousel className=" relative overflow-hidden">
           <CarouselContent className="">
             {data?.map((item, index) => (
               <CarouselItem key={index}>
