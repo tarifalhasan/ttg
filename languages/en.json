@@ -234,5 +234,32 @@
     "legalization and apostille",
     "interpretation services",
     "audio-video subtitles"
-  ]
+  ],
+  "order": {
+    "title": "order form ",
+    "description": "fill out the form, and we will respond with a price quote within 2 hours. ",
+    "btnText": "send order"
+  },
+  "translationDetails": {
+    "title": "translation details",
+    "1": "source language",
+    "2": "target language",
+    "3": "number of pages",
+    "4": "select the type of translation"
+  },
+  "documents": {
+    "title": "document upload",
+    "1": "documents (word, docx, PDF, max 16MB)",
+    "2": "translation delivery date ",
+    "3": "additional requests "
+  },
+  "personalInformation": {
+    "title": "personal information ",
+    "1": "choose entity type",
+    "2": "contact person",
+    "3": "company name",
+    "4": "phone number",
+    "email": "email adress",
+    "res": "company registration number"
+  }
 }

@@ -10,7 +10,6 @@ import { Metadata } from "next";
 import { useLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import NextTopLoader from "nextjs-toploader";
-import Header from "../../components/layout/Header";
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -37,7 +36,6 @@ export default function RootLayout({
 }) {
   const l = useLocale();
   const messages = useMessages();
-  const headerData = messages.header;
 
   if (locale !== l) {
     notFound();
@@ -52,28 +50,29 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <NextTopLoader
-          initialPosition={0.08}
-          crawlSpeed={200}
-          height={4}
-          crawl={true}
-          showSpinner={true}
-          easing="ease"
-          speed={50}
-          zIndex={1600}
-          showAtBottom={false}
-          color="hsl(25, 100%, 50%)"
-        />
-        <Toaster />
-        <Header data={headerData as any} />
-        <MobileHeader data={headerData as any} />
-
-        <main>
+        <>
           <NextIntlClientProvider messages={messages}>
-            {children}
+            <NextTopLoader
+              initialPosition={0.08}
+              crawlSpeed={200}
+              height={4}
+              crawl={true}
+              showSpinner={true}
+              easing="ease"
+              speed={50}
+              zIndex={1600}
+              showAtBottom={false}
+              color="hsl(25, 100%, 50%)"
+            />
+            <Toaster />
+
+            <>
+              <MobileHeader />
+              {children}
+              <Footer />
+            </>
           </NextIntlClientProvider>
-        </main>
-        <Footer />
+        </>
       </body>
     </html>
   );

@@ -31,6 +31,7 @@ import { toast } from "@/components/ui/use-toast";
 import { cn } from "@/lib/utils";
 import { CalendarIcon } from "@radix-ui/react-icons";
 import { format } from "date-fns";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 const translationTypes = [
   {
@@ -56,7 +57,6 @@ const entityTypesItems = [
     label: "legal entity",
   },
 ] as const;
-const MAX_FILE_SIZE = 16 * 1024 * 1024; // 16MB
 
 const FormSchema = z.object({
   sourcelanguage: z.string({
@@ -78,7 +78,9 @@ const FormSchema = z.object({
   deliveryDate: z.date({
     required_error: "delivery date is required.",
   }),
-  additionalrequests: z.string().optional(),
+  additionalrequests: z.string({
+    required_error: "additional requests is required.",
+  }),
   contactPerson: z.string({
     required_error: "please add a contact person",
   }),
@@ -88,17 +90,29 @@ const FormSchema = z.object({
   phoneNumber: z.string({
     required_error: "please enter you phone number",
   }),
-  email: z.string().email({
-    message: "Please enter your email address",
-  }),
+  email: z
+    .string({
+      required_error: "please enter your email address",
+    })
+    .email({
+      message: "Please enter your email address",
+    }),
   companyRegistrationNumber: z.string({
     required_error: "Please enter a company registration number",
   }),
   documents: z.array(
-    z.object({
-      name: z.string(),
-      size: z.number(),
-    })
+    z.object(
+      {
+        name: z.string(),
+        size: z.number(),
+      },
+      {
+        required_error: "upload you documents",
+      }
+    ),
+    {
+      required_error: "upload your documents",
+    }
   ),
 });
 
@@ -145,12 +159,12 @@ export default function OrderForm() {
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast({
-      title: "You submitted the following values:",
-      description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
+      title: "You submitted the order Thank you!",
+      // description: (
+      //   <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
+      //     <code className="text-white">{JSON.stringify(data, null, 2)}</code>
+      //   </pre>
+      // ),
     });
     console.log(data);
   }
@@ -162,12 +176,18 @@ export default function OrderForm() {
     setValue("documents", updatedFiles); // Update the form value
   };
 
+  // translate hook
+
+  const details = useTranslations("translationDetails");
+  const d = useTranslations("documents");
+  const pi = useTranslations("personalInformation");
+  const t = useTranslations("order");
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className=" space-y-6">
         <div className=" space-y-4">
           <div>
-            <h2 className=" text-lg font-medium">1.translation details </h2>
+            <h2 className=" text-lg font-medium">1.{details("title")} </h2>
           </div>
           <div className=" grid sm:grid-cols-2 gap-5">
             <FormField
@@ -176,7 +196,7 @@ export default function OrderForm() {
               render={({ field }) => (
                 <FormItem className=" space-y-1">
                   <FormLabel className="text-sm text-dark-purple">
-                    source language
+                    {details("1")}
                   </FormLabel>
                   <Select
                     onValueChange={field.onChange}
@@ -202,7 +222,7 @@ export default function OrderForm() {
               render={({ field }) => (
                 <FormItem className=" space-y-1">
                   <FormLabel className="text-sm text-dark-purple">
-                    target language
+                    {details("2")}
                   </FormLabel>
                   <Select
                     onValueChange={field.onChange}
@@ -229,7 +249,7 @@ export default function OrderForm() {
             render={() => (
               <FormItem>
                 <FormLabel className="text-sm text-dark-purple">
-                  select the type of translation
+                  {details("3")}
                 </FormLabel>
                 <div className="flex flex-row flex-wrap gap-3 items-start space-x-3 space-y-0">
                   {translationTypes.map((item) => (
@@ -274,7 +294,7 @@ export default function OrderForm() {
         </div>
         <div className=" space-y-4">
           <div>
-            <h2 className=" text-lg font-medium">2.document upload</h2>
+            <h2 className=" text-lg font-medium">2.{d("title")}</h2>
           </div>
           <div>
             <FormField
@@ -283,7 +303,7 @@ export default function OrderForm() {
               render={({ field }) => (
                 <FormItem className=" space-y-1">
                   <FormLabel className="text-sm text-dark-purple">
-                    documents (word, docx, PDF, max 16MB)
+                    {d("1")}
                   </FormLabel>
                   <FormControl>
                     <Input
@@ -339,7 +359,7 @@ export default function OrderForm() {
             render={({ field }) => (
               <FormItem className="flex flex-col space-y-1">
                 <FormLabel className="text-sm text-dark-purple">
-                  select the type of translation
+                  {d("2")}
                 </FormLabel>
                 <Popover>
                   <PopoverTrigger asChild>
@@ -379,7 +399,7 @@ export default function OrderForm() {
             render={({ field }) => (
               <FormItem className=" space-y-1">
                 <FormLabel className="text-sm text-dark-purple">
-                  additional requests
+                  {d("3")}
                 </FormLabel>
                 <FormControl>
                   <Input placeholder="ex: order information" {...field} />
@@ -391,7 +411,7 @@ export default function OrderForm() {
         </div>
         <div className=" space-y-4">
           <div>
-            <h2 className=" text-lg font-medium">3.personal information </h2>
+            <h2 className=" text-lg font-medium">3.{pi("title")} </h2>
           </div>
           <FormField
             control={control}
@@ -399,7 +419,7 @@ export default function OrderForm() {
             render={() => (
               <FormItem>
                 <FormLabel className="text-sm text-dark-purple">
-                  select the type of translation
+                  {pi("1")}
                 </FormLabel>
                 <div className="flex flex-wrap gap-3 flex-row items-start space-x-3 space-y-0">
                   {entityTypesItems.map((item) => (
@@ -446,7 +466,7 @@ export default function OrderForm() {
               render={({ field }) => (
                 <FormItem className=" space-y-1">
                   <FormLabel className="text-sm text-dark-purple">
-                    contact person
+                    {pi("2")}
                   </FormLabel>
                   <FormControl>
                     <Input placeholder="full name" {...field} />
@@ -461,7 +481,7 @@ export default function OrderForm() {
               render={({ field }) => (
                 <FormItem className=" space-y-1">
                   <FormLabel className="text-sm text-dark-purple">
-                    company name
+                    {pi("3")}
                   </FormLabel>
                   <FormControl>
                     <Input placeholder="ex. Firma SRL" {...field} />
@@ -476,7 +496,7 @@ export default function OrderForm() {
               render={({ field }) => (
                 <FormItem className=" space-y-1">
                   <FormLabel className="text-sm text-dark-purple">
-                    phone number
+                    {pi("4")}
                   </FormLabel>
                   <FormControl>
                     <Input placeholder="+40" {...field} />
@@ -491,7 +511,7 @@ export default function OrderForm() {
               render={({ field }) => (
                 <FormItem className=" space-y-1">
                   <FormLabel className="text-sm text-dark-purple">
-                    email adress
+                    {pi("5")}
                   </FormLabel>
                   <FormControl>
                     <Input placeholder="nume@email.com" {...field} />
@@ -507,7 +527,7 @@ export default function OrderForm() {
             render={({ field }) => (
               <FormItem className=" space-y-1">
                 <FormLabel className="text-sm text-dark-purple">
-                  company registration number
+                  {pi("6")}
                 </FormLabel>
                 <FormControl>
                   <Input placeholder="ex: RO1234567" {...field} />
@@ -517,7 +537,11 @@ export default function OrderForm() {
             )}
           />
         </div>
-        <Button type="submit">Submit</Button>
+        <div className=" flex justify-end pt-5">
+          <Button size={"lg"} type="submit">
+            {t("btnText")}
+          </Button>
+        </div>
       </form>
     </Form>
   );

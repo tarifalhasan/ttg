@@ -4,13 +4,17 @@ import { AlignJustify } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Phone, X } from "lucide-react";
+import { useMessages } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import LocaleSwitcher from "../LanguageSwitcher";
 
-const MobileHeader = ({ data }: { data: any[] }) => {
+const MobileHeader = () => {
   const [header, setHeader] = useState(false);
   const [nav, setNav] = useState(false);
+  const messages = useMessages();
+  const headerData = messages.header as unknown as any[];
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 40) {
@@ -69,7 +73,7 @@ const MobileHeader = ({ data }: { data: any[] }) => {
         </div>
         {nav && (
           <ul className="  flex flex-col justify-center items-center gap-1">
-            {data?.map((data, index) => (
+            {headerData?.map((data, index) => (
               <li className=" block" onClick={() => setNav(false)} key={index}>
                 <Link
                   href={data.href as string}
@@ -80,6 +84,11 @@ const MobileHeader = ({ data }: { data: any[] }) => {
               </li>
             ))}
           </ul>
+        )}
+        {nav && (
+          <div className=" py-2 flex justify-center">
+            <LocaleSwitcher path={"/order"} />
+          </div>
         )}
       </div>
     </header>

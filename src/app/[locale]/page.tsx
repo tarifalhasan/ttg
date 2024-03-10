@@ -1,3 +1,4 @@
+import Header from "@/components/layout/Header";
 import AboutUs from "@/components/pages/home/AboutUs";
 import Collaborators from "@/components/pages/home/Collaborators";
 import ContactUs from "@/components/pages/home/ContactUs";
@@ -16,6 +17,8 @@ export default function Index() {
 
   return (
     <>
+      <Header />
+      {/* <MobileHeader /> */}
       <Hero items={messages.heroItems as any} />
       <Collaborators />
       <OurMission />

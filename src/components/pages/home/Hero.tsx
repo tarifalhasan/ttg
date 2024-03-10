@@ -9,10 +9,10 @@ const Hero = ({ items }: { items: any[] }) => {
       style={{
         backgroundImage: `url(${t("bg_image")})`,
       }}
-      className="bg-[length:100%_94%]  xl:bg-[length:100%_87%]  2xl:bg-[length:100%_99%]  relative z-10 overflow-hidden   max-[1023px]:!bg-none  lg:min-h-screen 2xl:min-h-[90vh]  w-full bg-no-repeat "
+      className="bg-[length:100%_94%]   xl:bg-[length:100%_87%]  2xl:bg-[length:100%_99%]  relative z-10 overflow-hidden   max-[1023px]:!bg-none  lg:min-h-screen 2xl:min-h-[90vh]  w-full bg-no-repeat "
     >
       <div className="  flex flex-col md:flex-row justify-between gap-5 container w-full">
-        <div className=" pt-[7.5rem]  xl:absolute  xl:top-[17%] xl:-translate-y-[17%]">
+        <div className=" pt-[1.5rem] sm:pt-[7.5rem]  xl:absolute  xl:top-[17%] xl:-translate-y-[17%]">
           <div className=" max-w-[450px] xl:max-w-[532px]">
             <h2 className=" text-[2.5rem] xl:text-[3rem] font-bold leading-[1.2]">
               your message, <br /> our words
@@ -26,7 +26,7 @@ const Hero = ({ items }: { items: any[] }) => {
           </div>
         </div>
         <div>
-          <div className=" pt-12 sm:pt-[10rem] lg:hidden grid grid-cols-2 gap-4">
+          <div className=" pt-5 sm:pt-[10rem] lg:hidden grid grid-cols-2 gap-4">
             {items.map((item, index) => (
               <div
                 key={index}

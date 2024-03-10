@@ -42,11 +42,11 @@ export const menuItems: MenuItem[] = [
   },
 ];
 
-const Header = ({ className }: { className?: string }) => {
+const OrderHeader = () => {
   const messages = useMessages();
   const headerData = messages.header as unknown as any[];
   const [header, setHeader] = useState(false);
-  const [nav, setNav] = useState(false);
+
   const pathName = usePathname();
   const local = useLocale();
 
@@ -69,8 +69,8 @@ const Header = ({ className }: { className?: string }) => {
   return (
     <header
       className={cn(
-        " hidden lg:flex py-5 z-50 h-[88px] items-center   fixed left-0 right-0 top-0",
-        header ? "backdrop-blur-sm bg-white/[0.8] " : ""
+        " hidden lg:flex py-5 z-50 h-[88px] items-center    sticky left-0 right-0 top-0",
+        header ? "backdrop-blur-sm bg-white/[0.8] " : " bg-light-gray"
       )}
     >
       <div
@@ -108,4 +108,4 @@ const Header = ({ className }: { className?: string }) => {
   );
 };
 
-export default Header;
+export default OrderHeader;
