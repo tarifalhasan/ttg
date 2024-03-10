@@ -65,11 +65,11 @@ const MobileHeader = () => {
               </a>
             </div>
           </div>
-          <div className="  inline-flex items-center gap-6">
+          <Link href={"/en/order"} className="  inline-flex items-center gap-6">
             <Button size={"lg"} className="rounded-full">
               <Phone className=" w-6 h-6" />
             </Button>
-          </div>
+          </Link>
         </div>
         {nav && (
           <ul className="  flex flex-col justify-center items-center gap-1">
