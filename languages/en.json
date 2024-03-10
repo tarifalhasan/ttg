@@ -156,5 +156,20 @@
       "title": "quality control",
       "description": "within our Quality Assurance (QA) department, dedicated reviewers follow strict guidelines tailored to each project.."
     }
+  ],
+  "aboutUs": {
+    "title": "about us",
+    "description1": "translate to go (TTG) represents the ideal solution for companies in need of extensive translation services. at TTG, we believe in the powerful impact of words, and we are here to provide you with a diverse range of services, surpassing the limitations of translations.",
+    "description2": "we distinguish ourselves through our long-term partnerships with law firms, notaries, and legal specialists, ensuring that your firm benefits from all the services it needs"
+  },
+  "team": {
+    "title": "team",
+    "description": "translate to go is where experience, professionalism, and passion for translations converge. Irina and Elena embarked on this journey with two laptops, a wealth of specialized knowledge in each of their fields of expertise, and the desire to build bridges between languages, cultures, and diverse needs."
+  },
+  "teamMembers": [
+    {
+      "name": "irina",
+      "description": "managing partner"
+    }
   ]
 }

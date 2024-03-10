@@ -166,5 +166,20 @@
       "title": "controlul calității",
       "description": "în cadrul departamentului nostru de Asigurare a Calității (QA), revizorii dedicați urmează ghiduri stricte adaptate fiecărui proiect."
     }
+  ],
+  "aboutUs": {
+    "title": "despre noi",
+    "description1": "translate to go (ttg) reprezintă soluția ideală pentru companiile care necesită servicii de traducere extinse. la ttg, credem că cuvintele au o putere deosebită, iar noi suntem aici pentru a vă oferi o gamă variată de servicii, depășind limitările unei simple traduceri.",
+    "description2": "ne distingem prin parteneriatele noastre de lungă durată cu firme de avocatură, notari publici și specialiști în domeniul juridic, asigurându-ne că firma dumneavoastră beneficiază de toate serviciile de care are nevoie."
+  },
+  "team": {
+    "title": "echipa",
+    "description": "Translate To Go este locul unde se întâlnesc experiența, profesionalismul și pasiunea pentru traduceri. Noi, Irina și Elena, am pornit la drum cu două laptopuri, un bagaj de cunoștinte de specialitate fiecare în propriul domeniu de expertiză și cu dorința a crea punți între limbi, culturi și nevoi diferite."
+  },
+  "teamMembers": [
+    {
+      "name": "irina",
+      "description": "managing partner"
+    }
   ]
 }

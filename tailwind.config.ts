@@ -21,6 +21,8 @@ const config = {
     extend: {
       backgroundImage: {
         hero: "url('/images/hero.webp')",
+        gteam:
+          "linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.00) 100%)",
       },
       colors: {
         border: "hsl(var(--border))",
