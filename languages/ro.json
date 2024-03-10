@@ -5,7 +5,7 @@
   "HomeHero": {
     "description": "agenția noastră se concentrează pe două aspecte esențiale în orice proiect: calitatea traducerii și rapiditatea cu care ne achităm de responsabilități față de clienții noștri.",
     "buttonText": "comandă online",
-    "bg_image": "url('/images/hero.webp')"
+    "bg_image": "/images/hero.webp"
   },
   "heroItems": [
     {
@@ -47,6 +47,102 @@
       "label": "contact",
       "href": "/contacts",
       "id": 4
+    }
+  ],
+  "ourMission": {
+    "title": "misiunea noastră",
+    "description1": "suntem aici pentru a face ca traducerea să fie mai mult decât o simplă conversie a cuvintelor",
+    "description2": "suntem partenerii dumneavoastră de încredere în universul traducerilor complexe și specializate."
+  },
+  "services": {
+    "title": "servicii complete"
+  },
+  "servicesItems": [
+    {
+      "title": "servicii de traducere",
+      "description": "traduceri precise și profesionale în diverse limbi și domenii",
+      "id": "dfkadnskjfdnsf",
+      "icon": "/icons/services/translate.png"
+    },
+    {
+      "title": "localizare",
+      "description": "esentială pentru conectarea globala și pentru explorarea unor piețe noi",
+      "id": "dfkadnskdfdssfdsjfdnsf",
+      "icon": "/icons/services/localize.png"
+    },
+    {
+      "title": "traducere autorizată",
+      "description": "traduceri realizate de traducători autorizați de Ministerul Justiției",
+      "id": "dfkadnsdfwdesfgkjfdnsf",
+      "icon": "/icons/services/autorize.png"
+    },
+    {
+      "title": "legalizare si apostilare",
+      "description": "traduceri legalizate la notar, apostilate sau supralegalizate",
+      "id": "dfkadnskjfdnsdfdfdfdf",
+      "icon": "/icons/services/legalize.png"
+    },
+    {
+      "title": "interpretariat",
+      "description": "asigurând cumunicarea eficientă și precisă în diferite contexte",
+      "id": "dfkadn45454skjfdnsf",
+      "icon": "/icons/services/interpret.png"
+    },
+    {
+      "title": "subtitrări audio-video",
+      "description": "traducerea subtitrărilor audio-video pentru experiențe cinefile autentice",
+      "id": "dfkadnskjfdnsf545",
+      "icon": "/icons/services/subtitle.png"
+    }
+  ],
+  "packagesSection": {
+    "title": "pachete corporate",
+    "description": "solicită o cotație de preț pentru pachetul care întrunește nevoile companiei tale",
+    "btnText": "contactează-ne"
+  },
+  "packagesItems": [
+    {
+      "icon": "/icons/Standard.svg",
+      "title": "standard",
+      "features": [
+        "Traducător general",
+        "Consultație gratuită",
+        "Prioritate pentru comenzi*"
+      ],
+      "otherFeatures": ["*răspuns în max 2 ore de la solicitare"]
+    },
+    {
+      "icon": "/icons/pro.svg",
+      "title": "professional",
+      "features": [
+        "Traducător experimentat in funcție de domeniu*",
+        "Consultanță gratuită",
+        "Prioritate pentru comenzi** ",
+        "Revizor inclus",
+        "Controlul calității",
+        "Servicii de curierat în toată țara gratuit"
+      ],
+      "otherFeatures": [
+        "*juridic, financiar, medical, tehnic",
+        "**răspuns în max 15 minute de la solicitare"
+      ]
+    },
+    {
+      "icon": "/icons/bank.svg",
+      "title": "business",
+      "features": [
+        "Traducător experimentat in funcție de domeniu*",
+        "Consultanță gratuită",
+        "Prioritate pentru comenzi** ",
+        "Revizor inclus",
+        "Controlul calității",
+        "Servicii de curierat în toată țara gratuit",
+        "Fără percepere taxă de urgență pentru mandate"
+      ],
+      "otherFeatures": [
+        "*juridic, financiar, medical, tehnic",
+        "**răspuns în max 15 minute de la solicitare"
+      ]
     }
   ]
 }

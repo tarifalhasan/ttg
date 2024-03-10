@@ -5,7 +5,7 @@
   "HomeHero": {
     "description": "our agency focuses on two essential aspects in every project: the quality of translation and the speed with which we fulfill our responsibilities towards our clients.",
     "buttonText": "order online",
-    "bg_image": "url('/images/hero_en.webp')"
+    "bg_image": "/images/hero_en.webp"
   },
   "heroItems": [
     {
@@ -37,6 +37,102 @@
       "label": "Contact",
       "href": "/contacts",
       "id": 4
+    }
+  ],
+  "ourMission": {
+    "title": "our mission",
+    "description1": "we are here to make the translation more than just a simple conversion of words",
+    "description2": "we are your trusted partners in the realm of complex and specialized translations"
+  },
+  "services": {
+    "title": "comprehensive services"
+  },
+  "servicesItems": [
+    {
+      "title": "translation services",
+      "description": "accurate and professional translations in various languages and fields",
+      "id": "dfkadnskjfdnsf",
+      "icon": "/icons/services/translate.png"
+    },
+    {
+      "title": "localisation",
+      "description": "essential for global connectivity and the exploration of new markets",
+      "id": "dfkadnskdfdssfdsjfdnsf",
+      "icon": "/icons/services/localize.png"
+    },
+    {
+      "title": "authorized translation",
+      "description": "translations performed by translators authorized by the Ministry of Justice",
+      "id": "dfkadnsdfwdesfgkjfdnsf",
+      "icon": "/icons/services/autorize.png"
+    },
+    {
+      "title": "legalization and apostille",
+      "description": "notarized, apostilled, or super-legalized translations",
+      "id": "dfkadnskjfdnsdfdfdfdf",
+      "icon": "/icons/services/legalize.png"
+    },
+    {
+      "title": "interpretation services",
+      "description": "ensuring effective and accurate communication in various contexts",
+      "id": "dfkadn45454skjfdnsf",
+      "icon": "/icons/services/interpret.png"
+    },
+    {
+      "title": "audio-video subtitles",
+      "description": "translating audio-video subtitles for authentic cinephile experiences",
+      "id": "dfkadnskjfdnsf545",
+      "icon": "/icons/services/subtitle.png"
+    }
+  ],
+  "packagesSection": {
+    "title": "corporate packages",
+    "description": "request a price quote for the package that meets your company's needs",
+    "btnText": "contact us"
+  },
+  "packagesItems": [
+    {
+      "icon": "/icons/Standard.svg",
+      "title": "standard",
+      "features": [
+        "General translator",
+        "Free consultation",
+        "Priority for orders*"
+      ],
+      "otherFeatures": ["*response within 2 hours of request"]
+    },
+    {
+      "icon": "/icons/pro.svg",
+      "title": "professional",
+      "features": [
+        "Experienced translator tailored to your field*",
+        "Free consultation",
+        "Priority for orders**",
+        "Reviewer included",
+        "Quality control",
+        "Free nationwide courier services"
+      ],
+      "otherFeatures": [
+        "*legal, financial, medical, technical",
+        "**response within 15 minutes of request"
+      ]
+    },
+    {
+      "icon": "/icons/bank.svg",
+      "title": "business",
+      "features": [
+        "Experienced translator tailored to your field*",
+        "Free consultation",
+        "Priority for orders**",
+        "Reviewer included",
+        "Quality control",
+        "Free nationwide courier services",
+        "No emergency fee charges for orders"
+      ],
+      "otherFeatures": [
+        "*legal, financial, medical, technical",
+        "**response within 15 minutes of request"
+      ]
     }
   ]
 }
