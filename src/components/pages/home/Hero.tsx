@@ -9,7 +9,7 @@ const Hero = ({ items }: { items: any[] }) => {
       style={{
         backgroundImage: `url("/images/hero.webp")`,
       }}
-      className="bg-[length:100%_94%]   xl:bg-[length:100%_87%]  2xl:bg-[length:100%_99%]  relative z-10 overflow-hidden   max-[1023px]:!bg-none  lg:min-h-screen 2xl:min-h-[90vh]  w-full bg-no-repeat "
+      className="bg-[length:100%_94%]   xl:bg-[length:100%_87%]  2xl:bg-[length:100%_99%]  relative z-10 overflow-hidden   max-[1023px]:!bg-none  lg:min-h-[635.932px] xl:min-h-[90vh] 2xl:min-h-[800px]   w-full bg-no-repeat "
     >
       <div className=" h-full  relative  flex flex-col md:flex-row justify-between gap-5 container w-full">
         <div className=" pt-[1.5rem] sm:pt-[7.5rem] h-full  ">
