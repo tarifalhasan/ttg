@@ -1,18 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const Hero = ({ items }: { items: any[] }) => {
   const t = useTranslations("HomeHero");
 
   return (
-    <div
-      style={{
-        backgroundImage: `url("/images/hero.webp")`,
-      }}
-      className="bg-[length:100%_94%]   xl:bg-[length:100%_87%]  2xl:bg-[length:100%_99%]  relative z-10 overflow-hidden   max-[1023px]:!bg-none  lg:min-h-[635.932px] xl:min-h-[90vh] 2xl:min-h-[800px]   w-full bg-no-repeat "
-    >
-      <div className=" h-full  relative  flex flex-col md:flex-row justify-between gap-5 container w-full">
-        <div className=" pt-[1.5rem] sm:pt-[7.5rem] h-full  ">
+    <div className="hero_bg  bg-clip-border z-20 relative overflow-hidden bg-light-gray h-[calc(100vh)] 2xl:h-[80vh] bg-cover">
+      <div className="  relative  overflow-hidden container w-full h-full">
+        <div className=" top-[42%] z-40 -translate-y-[42%]  lg:absolute 2xl:left-[10%] container  ">
           <div className=" max-w-[450px] xl:max-w-[532px]">
             <h2 className=" text-[2.5rem] xl:text-[3rem] font-bold leading-[1.2]">
               your message, <br /> our words
@@ -26,7 +22,7 @@ const Hero = ({ items }: { items: any[] }) => {
           </div>
         </div>
         <div>
-          <div className=" pt-5 lg:absolute lg:right-[12%] 2xl:top-[85%] lg:top-[40%] xl:top-[60%] sm:pt-[10rem] grid grid-cols-2 lg:flex  gap-4">
+          <div className=" pt-5 z-40 lg:absolute right-0 top-[65%] -translate-y-[65%]  grid grid-cols-2 lg:flex  gap-4">
             {items.map((item, index) => (
               <div
                 key={index}
@@ -46,6 +42,13 @@ const Hero = ({ items }: { items: any[] }) => {
           </div>
         </div>
       </div>
+      <Image
+        className=" w-[52%] xl:w-[55%] 2xl:w-[auto] hidden lg:block z-10 absolute right-0 top-0"
+        src={"/images/5.svg"}
+        alt="dfdfd"
+        width={700}
+        height={702}
+      />
     </div>
   );
 };

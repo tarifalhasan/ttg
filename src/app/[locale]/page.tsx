@@ -16,7 +16,7 @@ export default function Index() {
   const messages = useMessages();
 
   return (
-    <>
+    <div className=" relative overflow-hidden">
       <Header />
       {/* <MobileHeader /> */}
       <Hero items={messages.heroItems as any} />
@@ -31,6 +31,6 @@ export default function Index() {
         data={messages.testimonialsData as unknown as ITestimonial[]}
       />
       <ContactUs />
-    </>
+    </div>
   );
 }

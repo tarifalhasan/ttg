@@ -83,3 +83,7 @@
     @apply px-3 lg:px-4;
   }
 }
+
+.hero_bg {
+  clip-path: ellipse(80% 98% at 50% 0%);
+}
