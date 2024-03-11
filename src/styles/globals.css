@@ -84,6 +84,8 @@
   }
 }
 
-.hero_bg {
-  clip-path: ellipse(80% 98% at 50% 0%);
+@media (min-width: 1024px) {
+  .hero_bg {
+    clip-path: ellipse(80% 98% at 50% 0%);
+  }
 }

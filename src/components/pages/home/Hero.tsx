@@ -6,9 +6,9 @@ const Hero = ({ items }: { items: any[] }) => {
   const t = useTranslations("HomeHero");
 
   return (
-    <div className="hero_bg  bg-clip-border z-20 relative overflow-hidden bg-light-gray h-[calc(100vh)] 2xl:h-[80vh] bg-cover">
+    <div className="hero_bg  bg-clip-border z-20 relative overflow-hidden lg:bg-light-gray lg:h-[calc(100vh)] 2xl:h-[80vh] bg-cover">
       <div className="  relative  overflow-hidden container w-full h-full">
-        <div className=" top-[42%] z-40 -translate-y-[42%]  lg:absolute 2xl:left-[10%] container  ">
+        <div className=" lg:top-[42%] z-40 lg:-translate-y-[42%]  lg:absolute 2xl:left-[10%] container  ">
           <div className=" max-w-[450px] xl:max-w-[532px]">
             <h2 className=" text-[2.5rem] xl:text-[3rem] font-bold leading-[1.2]">
               your message, <br /> our words
@@ -21,25 +21,24 @@ const Hero = ({ items }: { items: any[] }) => {
             </div>
           </div>
         </div>
-        <div>
-          <div className=" pt-5 z-40 lg:absolute right-0 top-[65%] -translate-y-[65%]  grid grid-cols-2 lg:flex  gap-4">
-            {items.map((item, index) => (
-              <div
-                key={index}
-                style={{
-                  backgroundColor: "rgba(12, 8, 25, 0.50)",
-                }}
-                className="  lg:backdrop-blur-[15px] lg:max-w-[180px] py-6 px-6 rounded-[16px]"
-              >
-                <h2 className=" text-4xl text-white font-bold leading-normal">
-                  {item.value}
-                </h2>
-                <p className=" text-base leading-6 text-white pt-2">
-                  {item.title}
-                </p>
-              </div>
-            ))}
-          </div>
+
+        <div className=" pt-5 z-40 lg:absolute lg:right-0 lg:top-[65%] lg:-translate-y-[65%]  grid grid-cols-2 lg:flex  gap-4">
+          {items.map((item, index) => (
+            <div
+              key={index}
+              style={{
+                backgroundColor: "rgba(12, 8, 25, 0.50)",
+              }}
+              className="  lg:backdrop-blur-[15px] lg:max-w-[180px] py-6 px-6 rounded-[16px]"
+            >
+              <h2 className=" text-4xl text-white font-bold leading-normal">
+                {item.value}
+              </h2>
+              <p className=" text-base leading-6 text-white pt-2">
+                {item.title}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
       <Image
