@@ -271,5 +271,14 @@
     "4": "telefon",
     "5": "adresa email",
     "6": "CUI"
+  },
+  "AREAS": {
+    "title": "domenii",
+    "1": "juridic",
+    "2": "medical",
+    "3": "tehnic",
+    "4": "financiar",
+    "5": "media",
+    "6": "web"
   }
 }

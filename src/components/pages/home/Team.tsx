@@ -26,7 +26,7 @@ const Team = () => {
             <p className=" text-lg text-dark-purple">{t("description")}</p>
           </div>
         </div>
-        <div className="grid w-full grid-cols-2 gap-6">
+        <div className="grid relative overflow-hidden w-full grid-cols-2 gap-6">
           {teamdata.map((item, index) => (
             <div
               key={item.id}
@@ -34,7 +34,7 @@ const Team = () => {
                 backgroundImage: `url(${item.profileImage})`,
                 padding: "120px 24px 24px 24px",
               }}
-              className="flex bg-cover h-full overflow-hidden after:inset-0 relative after:absolute after:w-full after:z-10 after:h-full after:bg-gteam min-h-[232px] rounded-[10px] justify-end  items-start"
+              className="flex bg-cover h-[232px] overflow-hidden after:inset-0 relative after:absolute after:w-full after:z-10 after:h-full after:bg-gteam min-h-[232px] rounded-[10px] justify-end  items-start"
             >
               <div className=" relative z-40">
                 <h3 className=" text-4xl text-white font-bold">{item.name}</h3>

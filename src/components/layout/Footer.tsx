@@ -6,6 +6,7 @@ import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 const Footer = () => {
   const message = useMessages();
   const t = useTranslations("footer");
+  const a = useTranslations("AREAS");
   const SDATA = message.footerServices as unknown as any[];
   return (
     <footer className="bg-light-gray ">
@@ -43,16 +44,26 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h3 className=" text-lg font-bold">domenii</h3>
+            <h3 className=" text-lg font-bold">{a("title")}</h3>
             <ul className=" pt-4 space-y-4">
-              <li className=" text-base font-normal text-[#606060]">juridic</li>
-              <li className=" text-base font-normal text-[#606060]">medical</li>
-              <li className=" text-base font-normal text-[#606060]">tehnic</li>
               <li className=" text-base font-normal text-[#606060]">
-                financiar
+                {a("1")}
               </li>
-              <li className=" text-base font-normal text-[#606060]">media</li>
-              <li className=" text-base font-normal text-[#606060]">web</li>
+              <li className=" text-base font-normal text-[#606060]">
+                {a("2")}
+              </li>
+              <li className=" text-base font-normal text-[#606060]">
+                {a("3")}
+              </li>
+              <li className=" text-base font-normal text-[#606060]">
+                {a("4")}
+              </li>
+              <li className=" text-base font-normal text-[#606060]">
+                {a("5")}
+              </li>
+              <li className=" text-base font-normal text-[#606060]">
+                {a("6")}
+              </li>
             </ul>
           </div>
           <div className="  h-full">

@@ -64,6 +64,7 @@ const config = {
         purple: "hsla(var(--purple))",
         light_purple: "hsla(var(--light-purple))",
         "light-gray": "#F4F6F9",
+        "dark-950": "rgba(12, 8, 25, 0.50)",
       },
       borderRadius: {
         lg: "var(--radius)",

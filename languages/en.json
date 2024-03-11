@@ -262,5 +262,14 @@
     "4": "phone number",
     "5": "email adress",
     "6": "company registration number"
+  },
+  "AREAS": {
+    "title": "areas",
+    "1": "legal",
+    "2": "medical",
+    "3": "technical",
+    "4": "financial",
+    "5": "media",
+    "6": "web"
   }
 }
